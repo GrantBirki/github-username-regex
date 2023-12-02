@@ -30,21 +30,18 @@ Additionally, this package (regex) also checks for GitHub EMU handles to see if 
 
 ## Installation
 
-### [npm](https://www.npmjs.com/)
+You can install [this package](https://www.npmjs.com/package/github-username-regex-js) via [npm](https://www.npmjs.com/):
 
 ```bash
 npm install github-username-regex-js
 ```
 
-## API
+## Usage
 
 ```javascript
+// Import the package
 import githubUsernameRegex from 'github-username-regex-js';
-```
 
-### githubUsernameRegex
-
-```javascript
 // Returns `true`
 githubUsernameRegex.test('a');
 githubUsernameRegex.test('0');
@@ -62,7 +59,8 @@ githubUsernameRegex.test('-a-b');
 githubUsernameRegex.test('a'.repeat(40));
 ```
 
-> Note: This module doesn't take reserved usernames into consideration. For example, it matches `help`, `about` and `pricing` even though they are reserved words and cannot be used as GitHub usernames.
+> [!NOTE]
+> This module doesn't take reserved usernames into consideration. For example, it matches `help`, `about` and `pricing` even though they are reserved words and cannot be used as GitHub usernames.
 
 ## License
 
