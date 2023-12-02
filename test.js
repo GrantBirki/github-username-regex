@@ -18,6 +18,9 @@ for (const validName of [
   'name_enterprise',
   'cool-name_enterprise',
   'AvalidName123-456',
+  'name-with-hyphens_company123',
+  'name-with-numbers123_company123',
+  'some-person_githubEmuCompany',
   'x'.repeat(39)
 ]) {
   strictEqual(

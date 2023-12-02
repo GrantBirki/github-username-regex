@@ -12,12 +12,19 @@ githubUsernameRegex.test('john-due'); //=> true
 githubUsernameRegex.test('john-due-'); //=> false
 ```
 
-According to the form validation messages on [*Join GitHub*](https://github.com/join) page,
+According to the form validation messages on the [*Join GitHub*](https://github.com/join) page,
 
-* GitHub username may only contain alphanumeric characters or hyphens.
-* GitHub username cannot have multiple consecutive hyphens.
-* GitHub username cannot begin or end with a hyphen.
-* Maximum is 39 characters.
+- GitHub usernames may only contain alphanumeric characters or hyphens
+- GitHub usernames cannot have multiple consecutive hyphens
+- GitHub usernames cannot begin or end with a hyphen
+- Usernames can have a maximum of 39 characters
+
+Additionally, this package (regex) also checks for GitHub EMU handles to see if they are valid as well. GitHub EMUs can look like this:
+
+- `name_company`
+- `name-with-hyphens_company`
+- `name-with-numbers123_company123`
+- etc
 
 ## Installation
 
@@ -35,8 +42,6 @@ import githubUsernameRegex from 'github-username-regex-js';
 
 ### githubUsernameRegex
 
-Type: [`RegExp`](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Regular_Expressions) (`/^[a-z\d](?:[a-z\d]|-(?=[a-z\d])){0,38}$/i`)
-
 ```javascript
 // Returns `true`
 githubUsernameRegex.test('a');
@@ -44,6 +49,7 @@ githubUsernameRegex.test('0');
 githubUsernameRegex.test('a-b');
 githubUsernameRegex.test('a-b-123');
 githubUsernameRegex.test('a'.repeat(39));
+githubUsernameRegex.test('some-person_githubEmuCompany'); // GitHub EMU
 
 // Returns `false`
 githubUsernameRegex.test('');
@@ -54,7 +60,7 @@ githubUsernameRegex.test('-a-b');
 githubUsernameRegex.test('a'.repeat(40));
 ```
 
-Note that this module doesn't take reserved usernames into consideration. For example it matches `help`, `about` and `pricing`, though they are reserved words and cannot be used as Github usernames.
+> Note: This module doesn't take reserved usernames into consideration. For example, it matches `help`, `about` and `pricing` even though they are reserved words and cannot be used as GitHub usernames.
 
 ## License
 
