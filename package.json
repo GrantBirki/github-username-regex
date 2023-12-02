@@ -14,7 +14,7 @@
     "prebuild": "eslint --fix module.js test.js",
     "build": "rollup --config=node:module --no-strict",
     "pretest": "npm run-script build",
-    "test": "node --throw-deprecation test.js"
+    "test": "node test.js"
   },
   "license": "CC0-1.0",
   "module": "module.js",
