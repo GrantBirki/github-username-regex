@@ -1,6 +1,6 @@
 # github-username-regex-js ✅
 
-[![npm version](https://img.shields.io/npm/v/github-username-regex-js.svg)](https://www.npmjs.com/package/github-username-regex-js) [![lint](https://github.com/GrantBirki/github-username-regex-js/actions/workflows/lint.yml/badge.svg)](https://github.com/GrantBirki/github-username-regex-js/actions/workflows/lint.yml) [![test](https://github.com/GrantBirki/github-username-regex-js/actions/workflows/test.yml/badge.svg)](https://github.com/GrantBirki/github-username-regex-js/actions/workflows/test.yml)
+[![npm version](https://img.shields.io/npm/v/github-username-regex-js.svg)](https://www.npmjs.com/package/github-username-regex-js) [![lint](https://github.com/GrantBirki/github-username-regex-js/actions/workflows/lint.yml/badge.svg)](https://github.com/GrantBirki/github-username-regex-js/actions/workflows/lint.yml) [![test](https://github.com/GrantBirki/github-username-regex-js/actions/workflows/test.yml/badge.svg)](https://github.com/GrantBirki/github-username-regex-js/actions/workflows/test.yml) [![build](https://github.com/GrantBirki/github-username-regex-js/actions/workflows/build.yml/badge.svg)](https://github.com/GrantBirki/github-username-regex-js/actions/workflows/build.yml)
 
 A regular expression that only matches a valid [GitHub](https://github.com/) username or [GitHub EMU](https://docs.github.com/en/enterprise-cloud@latest/admin/identity-and-access-management/understanding-iam-for-enterprises/about-enterprise-managed-users) username.
 
