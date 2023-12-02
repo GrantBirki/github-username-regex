@@ -10,7 +10,7 @@
   "scripts": {
     "format": "prettier --write '**/*.js'",
     "format-check": "prettier --check '**/*.js'",
-    "lint": "eslint src/**/*.js",
+    "lint": "eslint **/*.js",
     "prebuild": "eslint --fix module.js test.js",
     "build": "rollup --config=node:module --no-strict",
     "pretest": "npm run-script build",

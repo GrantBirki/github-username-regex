@@ -1,7 +1,7 @@
-'use strict';
+'use strict'
 
-const githubUsernameRegex = require('.');
-const {strictEqual} = require('assert');
+const githubUsernameRegex = require('.')
+const {strictEqual} = require('assert')
 
 for (const validName of [
   'a',
@@ -24,7 +24,7 @@ for (const validName of [
     githubUsernameRegex.test(validName),
     true,
     `Expected "${validName}" to be considered as a valid Github username, but it wasn't.`
-  );
+  )
 }
 
 for (const invalidName of [
@@ -50,8 +50,10 @@ for (const invalidName of [
   strictEqual(
     githubUsernameRegex.test(invalidName),
     false,
-    `Expected ${JSON.stringify(invalidName)} to be considered as an invalid Github username, but it wasn't.`
-  );
+    `Expected ${JSON.stringify(
+      invalidName
+    )} to be considered as an invalid Github username, but it wasn't.`
+  )
 }
 
-console.log('✅ All tests passed');
+console.log('✅ All tests passed')
