@@ -15,6 +15,9 @@ for (const validName of [
   '1-2',
   'abc123',
   'abc-123',
+  'name_enterprise',
+  'cool-name_enterprise',
+  'AvalidName123-456',
   'x'.repeat(39)
 ]) {
   strictEqual(
@@ -39,6 +42,8 @@ for (const invalidName of [
   '１',
   'あ',
   '🍣',
+  'wild*card',
+  'mona1--#@!lisa',
   String.fromCharCode(15),
   'x'.repeat(40)
 ]) {
@@ -48,29 +53,5 @@ for (const invalidName of [
     `Expected ${JSON.stringify(invalidName)} to be considered as an invalid Github username, but it wasn't.`
   );
 }
-
-strictEqual(
-  githubUsernameRegex.test(''),
-  false,
-  'Expected an empty string to be considered as an invalid Github username, but it wasn\'t.'
-);
-
-strictEqual(
-  githubUsernameRegex.test('wild*card'),
-  false,
-  'Expected "wild*card" to be considered as an invalid Github username, but it wasn\'t.'
-);
-
-strictEqual(
-  githubUsernameRegex.test('name_enterprise'),
-  true,
-  'Expected a GitHub EMU username to be considered as a valid Github username, but it wasn\'t.'
-);
-
-strictEqual(
-  githubUsernameRegex.test('cool-name_enterprise'),
-  true,
-  'Expected a GitHub EMU username to be considered as a valid Github username, but it wasn\'t.'
-);
 
 console.log('✅ All tests passed');
