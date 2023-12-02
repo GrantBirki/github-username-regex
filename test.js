@@ -20,7 +20,7 @@ for (const validName of [
   strictEqual(
     githubUsernameRegex.test(validName),
     true,
-    `Expected "${validName}" to be considiered as a valid Github username, but it wasn't.`
+    `Expected "${validName}" to be considered as a valid Github username, but it wasn't.`
   );
 }
 
@@ -46,8 +46,20 @@ for (const invalidName of [
   strictEqual(
     githubUsernameRegex.test(invalidName),
     false,
-    `Expected ${JSON.stringify(invalidName)} to be considiered as an invalid Github username, but it wasn't.`
+    `Expected ${JSON.stringify(invalidName)} to be considered as an invalid Github username, but it wasn't.`
   );
 }
+
+strictEqual(
+  githubUsernameRegex.test(''),
+  false,
+  'Expected an empty string to be considered as an invalid Github username, but it wasn\'t.'
+);
+
+strictEqual(
+  githubUsernameRegex.test('wild*card'),
+  false,
+  'Expected "wild*card" to be considered as an invalid Github username, but it wasn\'t.'
+);
 
 console.log('All tests passed.');
