@@ -32,7 +32,7 @@
   ],
   "devDependencies": {
     "@shinnn/eslint-config-node": "^3.0.0",
-    "eslint": "^3.13.1",
+    "eslint": "^8.55.0",
     "rollup": "^0.41.4",
     "rollup-config-module": "^1.0.0"
   }
