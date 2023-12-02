@@ -7,9 +7,11 @@ A regular expression that only matches a valid [GitHub](https://github.com/) use
 ```javascript
 import githubUsernameRegex from 'github-username-regex-js';
 
-githubUsernameRegex.test('john'); //=> true
-githubUsernameRegex.test('john-due'); //=> true
-githubUsernameRegex.test('john-due-'); //=> false
+githubUsernameRegex.test('monalisa'); //=> true
+githubUsernameRegex.test('mona-lisa'); //=> true
+githubUsernameRegex.test('name_company'); //=> true - GitHub EMU
+githubUsernameRegex.test('mona-lisa-'); //=> false
+githubUsernameRegex.test('mona%$^lisa'); //=> false
 ```
 
 According to the form validation messages on the [*Join GitHub*](https://github.com/join) page,
