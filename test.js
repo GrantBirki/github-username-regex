@@ -34,7 +34,6 @@ for (const invalidName of [
   'a-',
   '-b',
   'a--b',
-  'a_b',
   'a\nb',
   'Ａ',
   '１',
@@ -62,4 +61,16 @@ strictEqual(
   'Expected "wild*card" to be considered as an invalid Github username, but it wasn\'t.'
 );
 
-console.log('All tests passed.');
+strictEqual(
+  githubUsernameRegex.test('name_enterprise'),
+  true,
+  'Expected a GitHub EMU username to be considered as a valid Github username, but it wasn\'t.'
+);
+
+strictEqual(
+  githubUsernameRegex.test('cool-name_enterprise'),
+  true,
+  'Expected a GitHub EMU username to be considered as a valid Github username, but it wasn\'t.'
+);
+
+console.log('✅ All tests passed');
