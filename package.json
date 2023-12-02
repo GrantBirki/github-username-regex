@@ -1,6 +1,7 @@
 {
   "name": "github-username-regex-js",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "private": false,
   "description": "A regular expression that only matches a valid GitHub or GitHub EMU username",
   "repository": {
     "type": "git",
