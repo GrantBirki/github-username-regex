@@ -30,7 +30,7 @@ npm install github-username-regex-js
 ## API
 
 ```javascript
-import githubUsernameRegex from 'github-username-regex';
+import githubUsernameRegex from 'github-username-regex-js';
 ```
 
 ### githubUsernameRegex
